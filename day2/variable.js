@@ -64,13 +64,13 @@ function sayHello(){
 }
 // sayHello();
 
-let name = 'scott';
-console.log(name);
-name = 1200;
-console.log(name);
-name = 'kim';
-const message = `My name is ${name}`;
-console.log(message);
+// let name = 'scott';
+// console.log(name);
+// name = 1200;
+// console.log(name);
+// name = 'kim';
+// const message = `My name is ${name}`;
+// console.log(message);
 
 //number, string, boolean, null, undefined, symbol(ES6), obj
 console.log(typeof(100));       //typeod() 타입확인
@@ -125,10 +125,12 @@ const symbol4 = Symbol.for('id');
 console.log(symbol3);
 console.log(symbol3 === symbol4);
 
-//wrapper 클래스를 통해
+//wrapper
 let str = 'javascript';
 let len = str.length;
 console.log(len);
+
+//자바스크립트는 동적 타입이다.
 let text = 'hello';
 console.log(text.charAt(0));
 console.log(`value : ${text}, type : ${typeof text}`);
@@ -138,3 +140,32 @@ text = '10' + 5;
 console.log(`value : ${text}, type : ${typeof text}`);
 text = '22'/'2';
 console.log(`value : ${text}, type : ${typeof text}`);
+
+// const
+const bird = {species : "kestrel"};
+console.log(bird.species);
+bird.species = "Striated Caracara";
+console.log(bird.species);
+
+// 형변환
+console.log(String(30), String(true), String(false));
+console.log(Number('12345'));
+
+//출력방법
+// 1. console.log() - 콘솔창에 출력
+// 2. document.write - 웹페이지 문서에 출력
+// 3. alert() - 윈도우 알림 창
+// 4. innerHTML - 웹페이지
+
+//입력방법
+// 1. alert()
+// 2. prompt()
+// 3. confirm()
+
+// const name = prompt('이름을 입력하세요');
+// alert('반갑습니다' + name + '님');
+
+// 두 개의 정수를 입력받아 더하기
+let numA = prompt('정수 하나 입력');
+let numB = prompt('정수 하나 입력');
+alert(Number(numA) + Number(numB));
