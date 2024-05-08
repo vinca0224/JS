@@ -16,10 +16,10 @@ function log(message){
 }
 log('안녕하세요');
 
-function showError(){
-    alert('error!');
-}
-showError();
+// function showError(){
+//     alert('error!');
+// }
+// showError();
 
 // 자바스크립트는 함수가 객체로 취급된다.
 
@@ -66,3 +66,49 @@ let showHello = function(){
 showHello();
 let hi = showHello;
 hi();
+
+//즉시 실행 함수 : 즉시 실행되며 단 한 번만 호출되어 다시는 호출할 수 없다.
+let res2 = (function(){
+    let a= 10;
+    let b= 20;
+    return a+b;
+}());
+console.log(res2);
+// 입력 파라미터가 있는 즉시 실행 함수
+let res3 = (function(a,b){
+    return a*b
+}(10, 20));
+console.log(res3);
+
+//화살표 함수
+// let func = () => {};
+const simplePrint = function(){
+    console.log('simplePrint');
+}
+console.log(simplePrint);
+console.log(simplePrint());
+const simplePrint1 = () => {console.log('simplePrint');}
+
+const add2 = (a,b) => {return a + b;}
+console.log(add2(10, 20));
+
+const hi2= () => {alert('good');}
+hi();
+
+let hi3 = (user) => {document.write("hi " +user);}
+hi3('aaaa');
+
+//콜백함수
+function randomQuiz(answer, printYes, printNo){
+    if(answer == 'iloveYou'){
+        printYes();
+    }else printNo();
+}
+
+const printYes = function(){
+    console,log('yes');
+}
+const printNo = function(){
+    console.log("no")
+}
+randomQuiz('iloveyou', printYes, printNo);
