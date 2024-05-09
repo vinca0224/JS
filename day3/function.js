@@ -112,3 +112,45 @@ const printNo = function(){
     console.log("no")
 }
 randomQuiz('iloveyou', printYes, printNo);
+
+// function quiz
+// function calculate(command, a, b)
+// command : add, sub, divide, mul
+function calculate(command, a, b){
+    switch(command){
+        case 'add' :
+            return a+b;
+        case 'sub' :
+            return a-b;
+        case 'mul' :
+            return a*b;
+        case 'divide' :
+            return a/b;
+    }
+}
+console.log(calculate('divide', 12, 34));
+
+// // 함수를 입력파라미터로 받을 때는 함수 이름을 전달
+// function doSomething(add){
+//     console.log(add);
+//     const res4 = add(2,3);
+//     console.log(res4);
+// }
+// function add(a,b){
+//     const sum = a + b;
+//     return sum;
+// }
+
+// doSomething(add);
+
+function add(num1, num2){
+    return num1 + num2;
+}
+function mul(num1, num2){
+    return num1 * num2;
+}
+function surprise(callback){
+    const result = callback(2,3);
+    console.log(result);
+}
+surprise(mul);
