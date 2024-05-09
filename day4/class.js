@@ -91,3 +91,17 @@ console.log(tri instanceof Rectangle);
 console.log(tri instanceof Triangle);
 console.log(tri instanceof Shape);
 console.log(tri instanceof Object);
+
+class Counter{
+    constructor(){
+        this.count = 0;
+    }
+    increase(){
+        this.count++;
+        console.log(this.count);
+    }
+}
+const colCounter = new Counter();
+colCounter.increase();
+colCounter.increase();
+colCounter.increase();
