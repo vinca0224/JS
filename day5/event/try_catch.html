@@ -6,21 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>자리 배치도</h1>
     <script>
-        let totalNum = prompt("입장객은 몇명입니까?");
-        let colNum = prompt("한 줄에 몇 명씩 앉습니까?");
-        rowNum = Math.ceil(totalNum / colNum);
-
-        document.write("<table>");
-        for(let i=0; i<rowNum; i++){
-            document.write("<tr>");
-            for(let j=0; i<colNum; j++){
-                document.write("<td>"+j+"</td>");
+        let solution = 32;
+        function clicked(){
+            const answer = Number(document.getElementById("number").value);
+            const board = document.getElementById("board");
+            try{
+                if(answer == solution){
+                    board.innerHTML = '정답';
+                }else if(answer < solution){
+                    throw "작습니다.";
+                }else if(answer > solution){
+                    throw "큽니다.";
+                }
+            }catch(err){
+            board.innerHTML = err
             }
-            document.write("</tr>");
         }
-        document.write("</table>");
     </script>
+    <h1>Number Guess</h1>
+    <p>1부터 100사이의 숫자를 입력하시오</p>
+    <input type="text" id="number">
+    <button type="button" onclick="clicked()">제출</button>
+    <div id="board"></div>   
 </body>
 </html>
